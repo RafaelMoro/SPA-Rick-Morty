@@ -1,3 +1,31 @@
-body {
-    background-color: blueviolet;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+.characters {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+.character__title {
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: black;
+}
+.character__image {
+    border-radius: 1rem;
 }
