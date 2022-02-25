@@ -1,0 +1,19 @@
+{
+  "name": "spa_rickandmorty",
+  "version": "1.0.0",
+  "description": "SPA made with Javascript Vainilla, HTML, CSS, Webpack and Babel",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SPA",
+    "Javascript",
+    "HTML",
+    "CSS",
+    "Webpack",
+    "Babel"
+  ],
+  "author": "Rafael Moro <rafael.moro.galindo@gmail.com>",
+  "license": "MIT"
+}
