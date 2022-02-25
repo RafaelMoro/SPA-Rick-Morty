@@ -1,3 +1,5 @@
 import './styles/styles.css'
+import {router} from './routes'
 
-console.log('hola')
+window.addEventListener('load', router)
+window.addEventListener('hashchange', router)
