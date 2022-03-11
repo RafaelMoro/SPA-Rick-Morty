@@ -16,6 +16,7 @@ const router = async() => {
     const content = null || document.querySelector('.main')
 
     header.innerHTML = await Header()
+    //const srcImage = header.children[0].children[0].children[0].src
     let hash = getHash()
     let route = await resolveRoutes(hash)
     let render = routes[route] ? routes[route] : Error404

@@ -1,7 +1,9 @@
 const Header = () => {
     const view = `
     <h1>
-        <a href="#">Rick and Morty</a>
+        <a href="#">
+            <img src="" alt="Rick and Morty logo">
+        </a>
     </h1>
     `
     return view
