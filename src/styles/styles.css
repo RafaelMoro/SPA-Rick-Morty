@@ -37,11 +37,25 @@ body {
     gap: 2rem;
     justify-content: center;
 }
+.character__anchor {
+    position: relative;
+}
+
 .character__title {
-    margin: 1rem 0;
+    position: absolute;
+    bottom: 26rem;
+    left: 2.4rem;
     font-size: 2rem;
     color: var(--black);
-    text-align: center;
+    background: rgba(255, 255, 255, 0.6)
+}
+.character__status {
+    position: absolute;
+    bottom: 3rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    background: rgba(255, 255, 255, 0.6)
 }
 .character__image {
     border-radius: 1rem;
@@ -56,7 +70,6 @@ body {
 }
 .character-card__image h2 {
     font-size: 2.2rem;
-    text-align: center;
 }
 .character-card__description {
     display: flex;
