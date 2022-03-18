@@ -64,17 +64,25 @@ body {
     display: flex;
     gap: 2rem;
     margin: 2rem 0;
+    justify-content: center;
+}
+.character-card__image {
+    box-shadow: 6px 7px 43px -7px rgba(0,99,112,0.16), 1px 3px 8px rgba(0,99,112,0.16);
 }
 .character-card__image img {
     margin-bottom: 2rem;
 }
 .character-card__image h2 {
     font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 .character-card__description {
     display: flex;
+    padding: 3rem;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 6px 7px 43px -7px rgba(0,99,112,0.15), 1px 3px 8px rgba(0,99,112,0.16);
 }
 .character-card__description p {
     font-size: 2rem;
