@@ -9,6 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.js'
     },
+    devtool: 'source-map',
     resolve: {
         extensions: ['.js'],
         alias: {

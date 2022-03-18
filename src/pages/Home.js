@@ -2,10 +2,9 @@ import { getData } from "../utils/getData"
 
 const Home = async() => {
     const characters = await getData()
-    console.log(characters)
     const view = `
     <div class="characters">
-        ${characters.results.map(character => `
+        ${characters.map(character => `
         <article class="character">
             <a class="character__anchor" href="#/${character.id}/">
                 <img class="character__image" src="${character.image}" alt="${character.name}">
