@@ -3,23 +3,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const DotEnv = require('dotenv-webpack')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js'
+        filename: 'index.js'
     },
+    mode: 'development',
+    devtool: 'source-map',
     resolve: {
         extensions: ['.js'],
         alias: {
             '@images': path.resolve(__dirname, 'src/assets/img')
         }
     },
-    mode: 'production',
     module: {
         rules: [
             {
@@ -45,9 +43,7 @@ module.exports = {
             template: './public/index.html',
             filename: './index.html'
         }),
-        new MiniCssExtractPlugin({
-            filename: 'assets/[name].[contenthash].css'
-        }),
+        new MiniCssExtractPlugin(),
         new CopyPlugin({
             patterns: [
                 {
@@ -56,14 +52,13 @@ module.exports = {
                 }
             ]
         }),
-        new DotEnv(),
-        new CleanWebpackPlugin()
+        new DotEnv()
     ],
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new CssMinimizerPlugin(),
-            new TerserPlugin()
-        ]
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        historyApiFallback: true,
+        port: 3006,
+        open: true,
     }
 }
