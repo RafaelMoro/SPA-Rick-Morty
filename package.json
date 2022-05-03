@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "build:netlify": "node ./scripts/create-env.js && webpack --config webpack.config.js"
   },
   "keywords": [
     "SPA",
